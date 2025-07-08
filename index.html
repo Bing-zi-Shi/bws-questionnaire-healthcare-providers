@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BWS优劣尺度法问卷（医务人员版）</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        .instructions {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .question {
+            background-color: #fff;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .question-header {
+            font-weight: bold;
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .option-header {
+            font-weight: bold;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .option-text {
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .choice-row {
+            font-weight: bold;
+            padding: 10px;
+            color: #2c3e50;
+        }
+        .checkbox {
+            text-align: center;
+            padding: 10px;
+        }
+        input[type="checkbox"] {
+            transform: scale(1.5);
+        }
+        .explanation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .explanation-table th,
+        .explanation-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+        .explanation-table th {
+            background-color: #3498db;
+            color: white;
+        }
+        .explanation-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .strategy-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>BWS优劣尺度法问卷样本（医务人员版）</h1>
+        
+        <h2>1. 填写说明</h2>
+        <div class="instructions">
+            本问卷旨在了解您对社区结直肠癌筛查实施策略的优先选择。每一题均包含4个策略，请您根据在本社区实际工作的经验和感受，从中各选出"最适合实施"的1项和"最不适合实施"的1项。请务必每题都作答，并且每题仅可选择一项为"最适合"，一项为"最不适合"。
+        </div>
+
+        <h2>2. 策略评估（Best-Worst Scaling, BWS）</h2>
+        <div class="instructions">
+            本部分共有18组策略选择题。每组包含4项实施策略，请您在每组中：<br>
+            • 勾选"最适合在我们社区实施"的1项；<br>
+            • 勾选"最不适合在我们社区实施"的1项。<br>
+            请根据您对社区实际情况及个人工作经验进行判断。
+        </div>
+
+        <!-- 问题1 -->
+        <div class="question">
+            <div class="question-header">第1题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">开展教育会议</div>
+                <div class="option-text">评估准备情况并识别障碍和促进因素</div>
+                <div class="option-text">识别和培养倡导者</div>
+                <div class="option-text">促进适应性</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题2 -->
+        <div class="question">
+            <div class="question-header">第2题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">创建学习协作组</div>
+                <div class="option-text">获取和分享本土知识</div>
+                <div class="option-text">开发和构建质量监控系统</div>
+                <div class="option-text">开展持续培训</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题3 -->
+        <div class="question">
+            <div class="question-header">第3题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">促进/协助</div>
+                <div class="option-text">识别早期采用者</div>
+                <div class="option-text">制定正式实施蓝图</div>
+                <div class="option-text">量身定制策略</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题4 -->
+        <div class="question">
+            <div class="question-header">第4题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">开展教育会议</div>
+                <div class="option-text">创建学习协作组</div>
+                <div class="option-text">促进/协助</div>
+                <div class="option-text">评估准备情况并识别障碍和促进因素</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题5 -->
+        <div class="question">
+            <div class="question-header">第5题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">识别和培养倡导者</div>
+                <div class="option-text">开发和构建质量监控系统</div>
+                <div class="option-text">制定正式实施蓝图</div>
+                <div class="option-text">促进适应性</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题6 -->
+        <div class="question">
+            <div class="question-header">第6题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">获取和分享本土知识</div>
+                <div class="option-text">识别早期采用者</div>
+                <div class="option-text">开展持续培训</div>
+                <div class="option-text">量身定制策略</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题7 -->
+        <div class="question">
+            <div class="question-header">第7题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">开展教育会议</div>
+                <div class="option-text">获取和分享本土知识</div>
+                <div class="option-text">制定正式实施蓝图</div>
+                <div class="option-text">识别和培养倡导者</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题8 -->
+        <div class="question">
+            <div class="question-header">第8题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">创建学习协作组</div>
+                <div class="option-text">识别早期采用者</div>
+                <div class="option-text">评估准备情况并识别障碍和促进因素</div>
+                <div class="option-text">促进适应性</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题9 -->
+        <div class="question">
+            <div class="question-header">第9题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">促进/协助</div>
+                <div class="option-text">开发和构建质量监控系统</div>
+                <div class="option-text">开展持续培训</div>
+                <div class="option-text">量身定制策略</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题10 -->
+        <div class="question">
+            <div class="question-header">第10题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">开展教育会议</div>
+                <div class="option-text">开发和构建质量监控系统</div>
+                <div class="option-text">识别早期采用者</div>
+                <div class="option-text">促进适应性</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题11 -->
+        <div class="question">
+            <div class="question-header">第11题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">创建学习协作组</div>
+                <div class="option-text">制定正式实施蓝图</div>
+                <div class="option-text">开展持续培训</div>
+                <div class="option-text">评估准备情况并识别障碍和促进因素</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题12 -->
+        <div class="question">
+            <div class="question-header">第12题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">促进/协助</div>
+                <div class="option-text">获取和分享本土知识</div>
+                <div class="option-text">识别和培养倡导者</div>
+                <div class="option-text">量身定制策略</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题13 -->
+        <div class="question">
+            <div class="question-header">第13题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">开展教育会议</div>
+                <div class="option-text">开展持续培训</div>
+                <div class="option-text">量身定制策略</div>
+                <div class="option-text">识别和培养倡导者</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题14 -->
+        <div class="question">
+            <div class="question-header">第14题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">创建学习协作组</div>
+                <div class="option-text">开发和构建质量监控系统</div>
+                <div class="option-text">识别和培养倡导者</div>
+                <div class="option-text">量身定制策略</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题15 -->
+        <div class="question">
+            <div class="question-header">第15题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">促进/协助</div>
+                <div class="option-text">评估准备情况并识别障碍和促进因素</div>
+                <div class="option-text">制定正式实施蓝图</div>
+                <div class="option-text">促进适应性</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题16 -->
+        <div class="question">
+            <div class="question-header">第16题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">开展教育会议</div>
+                <div class="option-text">识别早期采用者</div>
+                <div class="option-text">获取和分享本土知识</div>
+                <div class="option-text">开展持续培训</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题17 -->
+        <div class="question">
+            <div class="question-header">第17题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">创建学习协作组</div>
+                <div class="option-text">促进/协助</div>
+                <div class="option-text">促进适应性</div>
+                <div class="option-text">量身定制策略</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <!-- 问题18 -->
+        <div class="question">
+            <div class="question-header">第18题</div>
+            <div class="options-grid">
+                <div class="option-header">编号/选项</div>
+                <div class="option-header">选项A</div>
+                <div class="option-header">选项B</div>
+                <div class="option-header">选项C</div>
+                <div class="option-header">选项D</div>
+                
+                <div class="choice-row"></div>
+                <div class="option-text">评估准备情况并识别障碍和促进因素</div>
+                <div class="option-text">开发和构建质量监控系统</div>
+                <div class="option-text">识别早期采用者</div>
+                <div class="option-text">制定正式实施蓝图</div>
+                
+                <div class="choice-row">最合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                
+                <div class="choice-row">最不合适</div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+                <div class="checkbox"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <h2>3. 策略简明解释表（基于ERIC研究）</h2>
+        <div class="instructions">
+            请在答题前阅读每条策略的简明释义。
+        </div>
+
+        <table class="explanation-table">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>策略名称</th>
+                    <th>策略名称（英文）</th>
+                    <th>策略定义（基于ERIC研究）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="strategy-name">开展教育会议</td>
+                    <td>Conduct educational meetings</td>
+                    <td>组织结直肠癌筛查知识培训会，提升医务人员对筛查技术、流程和沟通技巧的掌握</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="strategy-name">评估准备情况并识别障碍和促进因素</td>
+                    <td>Assess for readiness and identify barriers and facilitators</td>
+                    <td>评估社区卫生服务中心开展筛查的准备情况，识别影响筛查实施的障碍因素（如人员不足、设备缺乏）和促进因素（如政策支持、居民需求）</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="strategy-name">识别和培养倡导者</td>
+                    <td>Identify and prepare champions</td>
+                    <td>在医务人员中识别和培养筛查项目的积极推动者，发挥其在团队中的带头示范和推广作用</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="strategy-name">促进适应性</td>
+                    <td>Promote adaptability</td>
+                    <td>根据社区实际情况（如居民文化背景、经济条件）灵活调整筛查宣传方式和服务流程</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="strategy-name">创建学习协作组</td>
+                    <td>Create a learning collaborative</td>
+                    <td>建立由不同社区卫生服务中心参与的筛查工作学习小组，定期交流筛查经验和最佳实践</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="strategy-name">获取和分享本土知识</td>
+                    <td>Capture and share local knowledge</td>
+                    <td>收集和分享各社区在筛查实施中的成功经验、有效做法和实用技巧</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="strategy-name">开发和构建质量监控系统</td>
+                    <td>Develop and organize quality monitoring systems</td>
+                    <td>建立筛查工作质量监控体系，追踪筛查完成率、居民满意度等关键指标</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="strategy-name">开展持续培训</td>
+                    <td>Conduct ongoing training</td>
+                    <td>为医务人员提供持续的筛查知识更新和技能强化培训</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="strategy-name">促进/协助</td>
+                    <td>Facilitation</td>
+                    <td>为筛查工作提供实时协助和问题解决支持，帮助医务人员克服实施中的困难</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="strategy-name">识别早期采用者</td>
+                    <td>Identify early adopters</td>
+                    <td>识别在筛查工作中表现积极的医务人员和居民，从他们的经验中学习推广方法</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="strategy-name">制定正式实施蓝图</td>
+                    <td>Develop a formal implementation blueprint</td>
+                    <td>制定详细的筛查实施计划，明确目标、时间安排、责任分工和评估指标</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="strategy-name">量身定制策略</td>
+                    <td>Tailor strategies</td>
+                    <td>根据不同居民群体的特点和需求，定制个性化的筛查宣传和服务策略</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 30px; font-size: 12px; color: #7f8c8d;">
+            <strong>定义来源：</strong> Powell BJ, Waltz TJ, Chinman MJ, et al. A refined compilation of implementation strategies: results from the Expert Recommendations for Implementing Change (ERIC) project. Implementation Science. 2015;10(1):21.
+        </div>
+    </div>
+</body>
+</html>
+                
